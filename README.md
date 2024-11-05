@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/thanhtin4401/thanhtin4401/assets/85281544/a65ececb-7042-4a69-b9a6-71381c48b003" alt="giphy" />
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGg4bTl0aTF0aWJ2azR0Z2R3cmNya2RqbWszbjdtM2VxdG1sb2UxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4FGj5Im5z6SWvs6Q/giphy.gif" alt="giphy" />
 </p>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
