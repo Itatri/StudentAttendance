@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    
+
     <style>
         /* Custom CSS can be added here */
         .content{
@@ -17,7 +17,7 @@
             margin-bottom:40px;
         }
         .header {
-            background-color: #ff38667d;
+            background-color: #465596;
             color: #fff;
             padding: 10px 0;
         }
@@ -39,7 +39,7 @@
         }
 
         .header ul li a {
-            color: #000;
+            color: #ffffff;
             text-decoration: none;
             padding: 10px 15px;
             font-weight: 550;
@@ -50,11 +50,11 @@
             font-weight: bold;
             color: #000;
         }
-        
+
         i.fas.fa-bars.menu-icon {
             display: none;
         }
-        
+
         .cart-icon {
             position: relative;
         }
@@ -85,20 +85,20 @@
         .nav-link:hover {
             display: block;
         }
-        
+
         .schedule-table th, .schedule-table td {
             text-align: center;
             vertical-align: middle;
         }
-        
+
         .schedule-table th {
             background-color: #f8f9fa;
         }
-        
+
         .schedule-table .time-slot {
             width: 150px;
         }
-        
+
         .schedule-table .class-details {
             background-color: #e9ecef;
         }
@@ -108,7 +108,7 @@
             i.fas.fa-bars.menu-icon {
                 display: block;
             }
-            
+
             .header ul {
                 display: none;
             }
@@ -119,7 +119,7 @@
                 text-align: right;
                 cursor: pointer;
             }
-            
+
             .menu-items {
                 display: none;
                 background-color: #3333; /* Optional: Add background color to menu items */
@@ -127,12 +127,12 @@
                 position: relative; /* Đặt vị trí tuyệt đối */
                 width: 100%; /* Chiều rộng tương ứng với dropdown parent */
             }
-            
+
             .dropdown-menu.show {
                 top: 208px;
                 right: 30%;
             }
-            
+
             .menu-items.active {
                 display: block;
             }
@@ -262,7 +262,7 @@
             .filters {
                 flex-direction: column; /* Stack elements vertically on small screens */
             }
-            
+
             .col-md-3, .col-sm-6 {
                 flex: 0 0 50%;
             }
@@ -275,14 +275,14 @@
         <div class="row justify-content-between align-items-center">
             <div class="col-md-3">
                 <a href="/">
-                    <img src="/assets/Logo.png" alt="Logo website" style="width: 30px; height: 30px;">
+                    <img src="/assets/Logo.png" alt="Logo website" style="width: 50px; height: 50px;">
                 </a>
             </div>
             <div class="col-md-9">
                 <nav>
                     <ul class="nav justify-content-end menu-items">
-                    <li class="nav-item"><a class="nav-link" href="document.pdf">Document</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
+                    {{-- <li class="nav-item"><a class="nav-link" href="document.pdf">Document</a></li> --}}
+                        <li class="nav-item"><a class="nav-link" href="/">TRANG CHỦ</a></li>
                         @auth
                             @if (Auth::user()->role === 'STUDENT')
                                 <li class="nav-item"><a class="nav-link" href="/hocsinh/lichhoc">Lịch học</a></li>
@@ -309,12 +309,12 @@
                         @else
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('ĐĂNG NHẬP') }}</a>
                                 </li>
                             @endif
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('ĐĂNG KÝ') }}</a>
                                 </li>
                             @endif
                         @endauth
