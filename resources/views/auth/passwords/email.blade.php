@@ -1,4 +1,7 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('layout.user-layout')
+
+@section('title', 'Quên mật khẩu')
 
 @section('content')
 <div class="container">
