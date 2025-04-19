@@ -11,6 +11,33 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <style>
+        /* css for avatar */
+        .profile-image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image-container:hover {
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #ff4757;
+        }
+
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.1);
+        }
+
         /* Custom CSS can be added here */
         .content{
             margin-top:40px;
