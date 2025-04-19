@@ -1,3 +1,6 @@
 - Cách cài đặt php chạy server: https://tuhocict.com/cai-dat-moi-truong-phat-trien-ung-dung-php/
 - Khởi động Laravel development server:
 --> php artisan serve
+- Clear cache :
+--> php artisan cache:clear
+--> php artisan view:clear

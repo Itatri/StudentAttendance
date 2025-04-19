@@ -1,0 +1,422 @@
+
+        /* CSS styles for login and registration pages */
+        .auth-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .auth-card-header {
+            background: linear-gradient(45deg, #007bff, #00bcd4);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .auth-form {
+            padding: 2rem;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #00bcd4);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+
+        .form-check-input:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .form-link {
+            color: #007bff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* css for avatar */
+        .profile-image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image-container:hover {
+            box-shadow: 0 0 0 5px #fff, 0 0 0 8px #ff4757;
+        }
+
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.1);
+        }
+
+        /* Custom CSS can be added here */
+        .content{
+            margin-top:40px;
+            margin-bottom:40px;
+        }
+        .header {
+            background: linear-gradient(45deg, #465596, #2c387e);
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            max-width: 1200px;
+        }
+
+        .header .row {
+            align-items: center;
+        }
+
+        .header a {
+            transition: all 0.3s ease;
+        }
+
+        .header img {
+            transition: transform 0.3s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 10px 20px !important;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 10px;
+        }
+
+        .dropdown-item {
+            padding: 8px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: #465596;
+            color: #fff;
+            padding-left: 25px;
+        }
+
+        .menu-icon {
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+        }
+        .header h1 {
+            margin: 0;
+        }
+
+        .header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+
+        .header ul li {
+            display: block; /* Change to display block */
+            margin-bottom: 10px; /* Add margin bottom for spacing */
+        }
+
+        .header ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 550;
+        }
+
+        .header ul li a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #000;
+        }
+
+        i.fas.fa-bars.menu-icon {
+            display: none;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        .dropdown-menu {
+            background-color: #333;
+        }
+
+        .dropdown-menu a {
+            color: #fff;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #e83e8c;
+        }
+
+        .nav-link:hover {
+            display: block;
+        }
+
+        .schedule-table th, .schedule-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .schedule-table th {
+            background-color: #f8f9fa;
+        }
+
+        .schedule-table .time-slot {
+            width: 150px;
+        }
+
+        .schedule-table .class-details {
+            background-color: #e9ecef;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            i.fas.fa-bars.menu-icon {
+                display: block;
+            }
+
+            .header ul {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+                color: #fff;
+                text-align: right;
+                cursor: pointer;
+            }
+
+            .menu-items {
+                display: none;
+                background-color: #3333; /* Optional: Add background color to menu items */
+                padding: 20px; /* Optional: Add padding to menu items */
+                position: relative; /* Đặt vị trí tuyệt đối */
+                width: 100%; /* Chiều rộng tương ứng với dropdown parent */
+            }
+
+            .dropdown-menu.show {
+                top: 208px;
+                right: 30%;
+            }
+
+            .menu-items.active {
+                display: block;
+            }
+
+            .menu-items.active li {
+                display: block; /* Change to display block */
+                margin-bottom: 10px; /* Add margin bottom for spacing */
+            }
+
+            .menu-items.active a {
+                padding: 10px 0; /* Optional: Remove horizontal padding from links */
+                display: block; /* Optional: Display links as block */
+            }
+        }
+
+        /* ============================================================================================ */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filters form {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .filters form label {
+            margin-right: 10px;
+        }
+
+        select,
+        input[type="number"] {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-list li {
+            width: calc(25% - 10px); /* Adjust width based on desired columns */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-list li:hover {
+            transform: scale(1.02); /* Add subtle hover effect */
+        }
+
+        .product-list li img {
+            width: 100%; /* Adjust image width if needed */
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .product-list li h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .product-list li p {
+            margin-top: 5px;
+            color: #333;
+        }
+
+        /* Placeholder styles for ratings (replace with actual implementation) */
+        .product-list li .ratings {
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .product-list li .ratings i {
+            color: #f9c733;
+            font-size: 16px
+        }
+
+        .card {
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .card {
+                margin: 0 auto;
+            }
+
+            .filters {
+                flex-direction: column; /* Stack elements vertically on small screens */
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1400px) {
+            .row {
+                flex-direction: row;
+            }
+
+            .filters {
+                flex-direction: column; /* Stack elements vertically on small screens */
+            }
+
+            .col-md-3, .col-sm-6 {
+                flex: 0 0 50%;
+            }
+        }
