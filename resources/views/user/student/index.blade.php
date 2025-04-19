@@ -11,7 +11,9 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ url('assets/book') }}/{{ $profile->img }}" alt="Ảnh Sinh Viên" class="img-fluid rounded-circle shadow">
+                    <div class="profile-image-container">
+                        <img src="{{ url('assets/book') }}/{{ $profile->img }}" alt="Ảnh Sinh Viên" class="profile-image">
+                    </div>
                 </div>
                 <div class="col-md-8">
                     <div class="row">
