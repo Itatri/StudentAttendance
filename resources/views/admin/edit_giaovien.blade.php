@@ -1,4 +1,8 @@
-@extends('layout.admin-layout')
+@extends('layout.user-layout')
+
+@section('header')
+@include('admin.sidebar')
+@endsection
 
 @section('content')
 <div class="container form-container">
