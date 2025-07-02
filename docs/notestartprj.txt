@@ -15,7 +15,12 @@
 
 -  Kích hoạt extension fileinfo : 
 + Mở đường dẫn file: C:\PHP\php.ini 
-+ Tìm dòng sau trong file php.ini: ;extension=fileinfo
++ Tìm dòng sau trong file php.ini: 
+;extension=fileinfo 
+;extension=zip
+;extension=pdo_mysql
+;extension=mysqli
+
 + Bỏ dấu chấm phẩy (;) ở đầu dòng để kích hoạt extension
 
 - Khởi động Laravel development server:
