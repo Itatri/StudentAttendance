@@ -52,11 +52,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 // Student routes
 Route::middleware(['auth', 'student'])->group(function () {
-    
     Route::get('/hocsinh', [HocsinhModelController::class, 'index_hocsinh']);
     Route::get('/hocsinh/lichhoc', [LichhocController::class, 'lichhoc_hocsinh'])->name('student.schedule');
     Route::get('/hocsinh/lichhoc/{session_id}', [LichhocController::class, 'showSessionDetails'])->name('student.session.details');
-    Route::get('/', [HocsinhModelController::class, 'index_hocsinh']);
 });
 
 // Teacher routes
@@ -77,3 +75,11 @@ Route::get('/redirect-based-on-role', function() {
 
 // Authentication routes
 Auth::routes();
+
+Route::get('/', function () {
+    return redirect('/login');
+});
+
+Route::middleware(['auth'])->get('/welcome', function () {
+    return view('user.welcome');
+});
