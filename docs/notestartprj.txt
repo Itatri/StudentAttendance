@@ -1,4 +1,23 @@
 - Cách cài đặt php chạy server: https://tuhocict.com/cai-dat-moi-truong-phat-trien-ung-dung-php/
+
+- Cài đặt PHP : 
++ Tải Zip trên trang chủ PHP ( https://windows.php.net/download/ )
++ Giải nén vào C:\PHP ( Tạo folder PHP trong ổ C ) 
++ Thêm biến môi trường C:\PHP 
+--> Chạy terminal : php -v để kiểm tra 
+
+- Cài đặt Composer : 
++ Truy cập: https://getcomposer.org/download/
++ Tải về file Composer-Setup.exe (dành cho Windows).
++ Chạy file vừa tải và làm theo hướng dẫn để cài đặt Composer vào hệ thống.
+--> Chạy terminal : composer --version để kiểm tra 
+--> Chạy terminal : composer install trong project để cài composer cho project 
+
+-  Kích hoạt extension fileinfo : 
++ Mở đường dẫn file: C:\PHP\php.ini 
++ Tìm dòng sau trong file php.ini: ;extension=fileinfo
++ Bỏ dấu chấm phẩy (;) ở đầu dòng để kích hoạt extension
+
 - Khởi động Laravel development server:
 --> php artisan serve
 - Clear cache :
