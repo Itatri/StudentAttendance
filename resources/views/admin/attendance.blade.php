@@ -1,19 +1,7 @@
-@extends('layout.admin-layout')
+@extends('layout.user-layout')
 
 @section('header')
-<div class="col-md-2 sidebar">
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/admin">Quản lí tài khoản</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/admin/hocsinh">Quản lý học viên</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/giaovien">Quản lý giáo viên</a>
-        </li>
-    </ul>
-</div>
+@include('admin.sidebar')
 @endsection
 
 @section('content')

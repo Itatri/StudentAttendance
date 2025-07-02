@@ -101,8 +101,21 @@
         </div>
     </div>
 </nav>
-<div class="content">
-    @yield('content')
+<div class="container-fluid">
+    @hasSection('header')
+    <div class="row flex-nowrap">
+        <div class="col-12 col-lg-2 p-0">
+            @yield('header')
+        </div>
+        <div class="col-12 col-lg-10">
+            @yield('content')
+        </div>
+    </div>
+    @else
+    <div class="content">
+        @yield('content')
+    </div>
+    @endif
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>

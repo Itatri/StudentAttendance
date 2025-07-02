@@ -1,4 +1,4 @@
-@extends('layout.admin-layout')
+@extends('layout.user-layout')
 @section('content')
 <div class="container form-container">
     <h1 class="mb-4">Thêm giáo viên mới</h1>
@@ -47,4 +47,8 @@
         <button type="submit" class="btn btn-primary">Thêm giáo viên</button>
     </form>
 </div>
+@endsection
+
+@section('header')
+@include('admin.sidebar')
 @endsection

@@ -28,11 +28,13 @@ class adminController extends Controller
         $password = '123456';
         $hashedPassword = Hash::make($password);
 
+        /*
         if (Hash::check($password, $hashedPassword)) {
             echo 'Password is valid!';
         } else {
             echo 'Password is invalid!';
         }
+        */
         Paginator::useBootstrap();
 
         // Lấy giá trị từ input tìm kiếm
