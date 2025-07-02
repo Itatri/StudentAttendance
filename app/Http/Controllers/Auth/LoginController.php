@@ -41,12 +41,6 @@ class LoginController extends Controller
     }
     protected function authenticated(Request $request, $user)
     {
-        if ($user->role === 'admin') {
-            return redirect('/admin/hocsinh'); 
-        } elseif ($user->role === 'teacher') {
-            return redirect('/giaovien'); 
-        } else {
-            return redirect('/hocsinh'); 
-        }
+        return redirect('/welcome');
     }
 }

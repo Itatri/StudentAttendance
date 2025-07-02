@@ -73,8 +73,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item"><a class="nav-link" href="/">TRANG CHỦ</a></li>
                         @auth
+                            <li class="nav-item"><a class="nav-link" href="/welcome">Giới thiệu</a></li>
                             @if (Auth::user()->role === 'STUDENT')
                         <li class="nav-item"><a class="nav-link" href="/hocsinh/lichhoc"><i class="fas fa-calendar-alt me-1"></i> Lịch học</a></li>
                             @elseif (Auth::user()->role === 'TEACHER')
@@ -89,6 +89,15 @@
                                 </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li>
+                                @if (Auth::user()->role === 'STUDENT')
+                                    <a class="dropdown-item" href="/hocsinh"><i class="fas fa-user me-2"></i>Thông tin tài khoản</a>
+                                @elseif (Auth::user()->role === 'TEACHER')
+                                    <a class="dropdown-item" href="/giaovien"><i class="fas fa-user me-2"></i>Thông tin tài khoản</a>
+                                @elseif (Auth::user()->role === 'ADMIN')
+                                    <a class="dropdown-item" href="/admin/hocsinh"><i class="fas fa-user me-2"></i>Thông tin tài khoản</a>
+                                @endif
+                            </li>
+                            <li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                         @csrf
                                     <button type="submit" class="dropdown-item logout-btn"><i class="fas fa-sign-out-alt me-2"></i>Đăng xuất</button>
@@ -97,6 +106,8 @@
                         </ul>
                                 </li>
                         @endauth
+                        @guest
+                        @endguest
                     </ul>
         </div>
     </div>
