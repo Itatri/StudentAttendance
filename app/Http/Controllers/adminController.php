@@ -401,4 +401,11 @@ private function generateStudentId()
     {
         //
     }
+
+    // Trang quản lý tài khoản
+    public function taikhoan()
+    {
+        $students = \App\Models\hocsinhModel::all();
+        return view('admin.user', compact('students'));
+    }
 }
