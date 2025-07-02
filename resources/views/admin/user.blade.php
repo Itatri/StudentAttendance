@@ -4,13 +4,8 @@
 <div class="col-12 col-lg-2 sidebar p-0">
     <ul class="nav flex-column py-4 px-2 admin-sidebar-list">
         <li class="nav-item mb-2">
-            <a class="nav-link d-flex align-items-center" href="/admin">
+            <a class="nav-link active d-flex align-items-center" aria-current="page" href="/admin">
                 <i class="fas fa-user-cog me-2"></i> Quản lí tài khoản
-            </a>
-        </li>
-        <li class="nav-item mb-2">
-            <a class="nav-link active d-flex align-items-center" href="/admin/giaovien">
-                <i class="fas fa-chalkboard-teacher me-2"></i> Quản lý giáo viên
             </a>
         </li>
         <li class="nav-item mb-2">
@@ -18,12 +13,16 @@
                 <i class="fas fa-users me-2"></i> Quản lý học sinh
             </a>
         </li>
+        <li class="nav-item mb-2">
+            <a class="nav-link d-flex align-items-center" href="/admin/giaovien">
+                <i class="fas fa-chalkboard-teacher me-2"></i> Quản lý giáo viên
+            </a>
+        </li>
     </ul>
 </div>
 @endsection
 
 @section('content')
-<div class="col-12 col-lg-10">
 <style>
     .admin-sidebar-list .nav-link {
         color: #465596;
@@ -54,12 +53,12 @@
     .table tbody tr:hover {
         background: #f0f6ff;
     }
-    .teacher-avatar {
+    .student-avatar {
         width: 44px;
         height: 44px;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid #00bcd4;
+        border: 2px solid #007bff;
         box-shadow: 0 2px 8px rgba(0,123,255,0.08);
     }
     .action-buttons .btn {
@@ -72,7 +71,7 @@
     .action-buttons .btn-warning:hover { background: #ff9800; }
     .action-buttons .btn-danger { color: #fff; background: #e83e8c; border: none; }
     .action-buttons .btn-danger:hover { background: #c82333; }
-    .btn-add-teacher {
+    .btn-add-account {
         background: linear-gradient(90deg, #007bff, #00bcd4);
         color: #fff;
         border: none;
@@ -81,22 +80,9 @@
         margin-bottom: 18px;
         transition: background 0.2s, transform 0.2s;
     }
-    .btn-add-teacher:hover {
+    .btn-add-account:hover {
         background: linear-gradient(90deg, #00bcd4, #007bff);
         transform: translateY(-2px);
-    }
-    .form-inline .form-control {
-        border-radius: 8px;
-        margin-right: 8px;
-    }
-    .form-inline .btn-primary {
-        border-radius: 8px;
-        background: linear-gradient(90deg, #007bff, #00bcd4);
-        border: none;
-        font-weight: 600;
-    }
-    .form-inline .btn-primary:hover {
-        background: linear-gradient(90deg, #00bcd4, #007bff);
     }
     @media (max-width: 991.98px) {
         .table-container { padding: 10px 2px; margin-top: 8px; }
@@ -108,13 +94,7 @@
     }
 </style>
 <div class="container table-container">
-    <h2 class="mb-4"><i class="fas fa-chalkboard-teacher me-2"></i>Danh sách giáo viên</h2>
-    <!-- Form Tìm Kiếm -->
-    <form action="{{ url('/admin/giaovien') }}" method="GET" class="form-inline mb-3 d-flex align-items-center gap-2">
-        <input type="text" name="search" class="form-control" placeholder="Tìm kiếm giáo viên" value="{{ request()->query('search') }}">
-        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Tìm kiếm</button>
-    </form>
-    <a href="{{ url('/admin/giaovien/create') }}" class="btn btn-add-teacher"><i class="fas fa-user-plus me-1"></i> Thêm giáo viên mới</a>
+    <h2 class="mb-4"><i class="fas fa-user-cog me-2"></i>Danh sách tài khoản</h2>
     <div class="table-responsive">
         <table class="table table-striped table-bordered align-middle">
             <thead>
@@ -124,36 +104,33 @@
                     <th>Ngày sinh</th>
                     <th>Giới tính</th>
                     <th>Trình độ</th>
+                    <th>Loại đào tạo</th>
+                    <th>Ngành học</th>
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
-                    <th>Ảnh</th>
                     <th>Hành động</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($teachers as $teacher)
+            @foreach($students as $student)
                 <tr>
-                    <td>{{ $teacher->teacher_id }}</td>
-                    <td>{{ $teacher->first_name }} {{ $teacher->last_name }}</td>
-                    <td>{{ $teacher->date_of_birth }}</td>
-                    <td>{{ $teacher->gender }}</td>
-                    <td>{{ $teacher->education_level }}</td>
-                    <td>{{ $teacher->address }}</td>
-                    <td>{{ $teacher->phone_number }}</td>
-                    <td><img src="{{ url('assets/teacher_images') }}/{{ $teacher->img }}" alt="{{ $teacher->first_name }} {{ $teacher->last_name }}" class="teacher-avatar"></td>
+                    <td>{{ $student->student_id }}</td>
+                    <td>{{ $student->firt_name }} {{ $student->last_name }}</td>
+                    <td>{{ $student->date_of_birth }}</td>
+                    <td>{{ $student->gender }}</td>
+                    <td>{{ $student->education_level }}</td>
+                    <td>{{ $student->traning_type }}</td>
+                    <td>{{ $student->major }}</td>
+                    <td>{{ $student->address }}</td>
+                    <td>{{ $student->phone_number }}</td>
                     <td class="action-buttons">
-                        <a href="{{ url('/admin/giaovien/edit', $teacher->teacher_id) }}" class="btn btn-warning"><i class="fas fa-edit"></i> Sửa</a>
-                        <form action="{{ url('/admin/giaovien/destroy', $teacher->teacher_id) }}" method="POST" style="display:inline;">
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Xóa</button>
-                      </form>
+                        <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i> Sửa</a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Xóa</a>
                     </td>
                 </tr>
-                @endforeach
+            @endforeach
             </tbody>
         </table>
     </div>
-</div>
 </div>
 @endsection

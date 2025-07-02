@@ -41,6 +41,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/taikhoan/edit/{id}', [AdminController::class, 'edit_taikhoan']);
     Route::put('/admin/taikhoan/update/{id}', [AdminController::class, 'update_taikhoan']);
     Route::delete('/admin/taikhoan/destroy/{id}', [AdminController::class, 'destroy_taikhoan']);
+
+    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'taikhoan']);
 });
 
 // Routes accessible by either teacher or student
