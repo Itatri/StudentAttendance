@@ -154,3 +154,4 @@ $ php artisan serve
 - Xóa cache: `php artisan cache:clear`, `php artisan view:clear`
 - Tạo dữ liệu mẫu: `php artisan db:seed`
 - Kiểm thử: `php artisan test`
+
