@@ -155,4 +155,3 @@ $ php artisan serve
 - Tạo dữ liệu mẫu: `php artisan db:seed`
 - Kiểm thử: `php artisan test`
 
----
