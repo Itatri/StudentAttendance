@@ -156,12 +156,3 @@ $ php artisan serve
 - Kiểm thử: `php artisan test`
 
 ---
-
-## 7. Đóng góp & liên hệ
-- **Đóng góp:** Vui lòng tạo pull request hoặc issue trên Github.
-- **Tài liệu chi tiết:** Xem thêm trong thư mục `docs/`.
-- **Liên hệ:** [Quản trị viên dự án](mailto:admin@example.com)
-
----
-
-> © 2024 Student Attendance System. All rights reserved. 
